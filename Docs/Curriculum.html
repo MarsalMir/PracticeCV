@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Marçal Mir">
+    <title>Marçal Mir</title>
+    <link rel="stylesheet" type="text/css" href="Estil.css">
+    <script>
+        function toggleHide(obj){
+            let el = document.getElementById(obj);
+            if(el.style.display != 'none')
+                el.style.display = 'none';
+            else
+                el.style.display = 'block';
+        }
+    </script>
+    <script>
+        function onStart(){
+            let els = document.getElementsByClassName('DefaultHidden');
+            for(el in els){
+                els[el].style.display = 'none';
+            }
+        }
+    </script>
+    
+</head>
+<body onload="onStart()">
+    <header>
+        <div id="HeaderSection1">
+            <div id="img">
+                <img src="FotoPersona.jpg" alt="FotoPersona" width="179" height="250">
+            </div>
+            <div>
+                <h1>Marçal Mir Naranjo</h1>
+                <h2>Computer Enginiering student</h2>
+            </div>
+        </div>
+        <div id="HeaderSection2" >
+            <h2>Contact Information</h1>
+            <ul>
+                <li>
+                    <h3>mail:</h3>
+                    <p><a href="mailto:u1994947@campus.udg.edu">u1994947@campus.udg.edu</a></p>
+                </li>
+                <li>
+                    <h3>phone:</h3>
+                    <p>6xx xx xx xx</p>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <article>
+        <ul id="ArtSection1">
+            <li id="AboutMe">
+                <h3 onclick="toggleHide('AboutMeHide')">About me:</h3>
+                <ul id="AboutMeHide" class = "DefaultHidden">
+                    <h4>I consider myself to be:</h4>
+                    <ul>
+                        <li>
+                            <p>Responible</p>
+                        </li>
+                        <li>
+                            <p>Respectful</p>
+                        </li>
+                        <li>
+                            <p>Easy learner</p>
+                        </li>
+                        <li>
+                            <p>Good with planification and organization</p>
+                        </li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                <h3 onclick="toggleHide('ProjectsHide')">Personal Projects:</h3>
+                <ul id="ProjectsHide" class = "DefaultHidden">
+                    <li>
+                        <h4>My curriculum</h4>
+                            <ul>
+                                <li>
+                                    <p><a href="https://www.guthib.com">GitHub</a><p>
+                                </li>
+                                <li>
+                                    <p><a href="">Figma</a><p>
+                                </li>
+                                <li>
+                                    <p><a href="">Webpage</a><p>
+                                </li>
+                            </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="ArtSection2">
+            <li>
+                <h3 onclick="toggleHide('WorkHide')">Work Expirience:</h3>
+                <ul id = "WorkHide" class = "DefaultHidden">
+                    <li>
+                        <h4>Waiter <em class="Year">2024 Summer</em></h4>
+                        <p>xxx xxx Bar</p>
+                    </li>
+                    <li>
+                        <h4>Caisher <em class="Year">2025 Summer</em></h4>
+                        <p>xxx xxx Supermarket</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3 onclick="toggleHide('FormationHide')">Formation:</h3>
+                <ul id="FormationHide" class = "DefaultHidden">
+                    <li>
+                        <h4>ESO <em class="Year">2020</em></h4>
+                        <p>Institut Pere Borrell</p>
+                    </li>
+                    <li>
+                        <h4>Batxillerat <em class="Year">2022</em></h4>
+                        <p>Institut Pere Borrell</p>
+                    </li>
+                    <li>
+                        <h4>Degree on Computer Engineering <em class="Year">On process (3rd Grade)</em></h4>
+                        <p>Universitat de Girona</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>
